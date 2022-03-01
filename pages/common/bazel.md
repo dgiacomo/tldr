@@ -8,9 +8,13 @@
 
 - Add or update dependency "github.com/spf13/cobra" to the WORKSPACE (default: latest or specify version with "@v1.2.1"): 
 
-`./bazel.sh run //:gazelle update-repos {{dependency}}`       # latest
-`./bazel.sh run //:gazelle update-repos {{dependencya@v#}}`   # @ version number
+`./bazel.sh run //:gazelle update-repos {{dependency}}`       
+`./bazel.sh run //:gazelle update-repos {{dependencya@v#}}`   
 
+- Update WORKSPACE with the contents of the go.mod file : Note it has to be named go.mod
+
+`./bazel.sh run //:gazelle -- update-repos -from_file=go.mod`
+  
 - Full Clean
 
 `./bazel.sh clean --expunge`
@@ -23,6 +27,14 @@
 
 `run/dev/scripts/copy-generated-protos.sh clean`
 
-- Get a sorted list of all the dependencies used by "video"
+- Get a sorted list of all the dependencies used by "path" : path is expanded to "//path/..." : (video, data, run)
 
-`./run/dev/scripts/query_dependencies.sh {{path}}`  # path is expanded to "//path/..."
+`./run/dev/scripts/query_dependencies.sh {{path}}` 
+
+- Run a single test
+
+TODO: 
+
+- Build, but exclude a path
+
+TODO:
