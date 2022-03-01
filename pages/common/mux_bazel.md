@@ -1,6 +1,6 @@
 # bazel
 
-> More information: <https://bazel.build/>.
+> More information: <https://bazel.build/>
 
 - See what uses the dependency "org_golang_x_crypto" across entire repo: 
 
