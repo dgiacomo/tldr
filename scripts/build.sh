@@ -20,7 +20,7 @@ function build_index {
 function build_archive {
   rm -f "$TLDR_ARCHIVE"
   cd "$TLDRHOME/"
-  zip -q -r "$TLDR_ARCHIVE" pages* LICENSE.md index.json
+  zip -q -r "$TLDR_ARCHIVE" pages LICENSE.md index.json
   echo "Pages archive successfully built."
 }
 

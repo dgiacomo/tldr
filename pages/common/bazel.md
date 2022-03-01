@@ -6,17 +6,10 @@
 
 `./bazel.sh query "deps(//...)" --output graph | grep org_golang_x_crypto`
 
-- Update the dependency "github.com/spf13/cobra" (to latest): 
+- Add or update dependency "github.com/spf13/cobra" to the WORKSPACE (default: latest or specify version with "@v1.2.1"): 
 
-`./bazel.sh run //:gazelle update-repos github.com/spf13/cobra`
-
-- Update the dependency "github.com/spf13/cobra" to version "v1.2.1": 
-
-`./bazel.sh run //:gazelle update-repos github.com/spf13/cobra@v1.2.1`
-
-- Add the new dependency "github.com/juju/errors" to the WORKSPACE
-
-`./bazel.sh run //:gazelle update-repos github.com/juju/errors`
+`./bazel.sh run //:gazelle update-repos github.com/spf13/cobra`         # latest
+`./bazel.sh run //:gazelle update-repos github.com/spf13/cobra@v1.2.1`  #v.1.2.1
 
 - Full Clean
 
