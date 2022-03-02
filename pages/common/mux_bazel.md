@@ -30,10 +30,16 @@
 
 `./run/dev/scripts/query_dependencies.sh {{path}}` 
 
-- Run a single test
+- Run a single test - use `--test-args=run=<regex>`
 
-`TODO`
+`./bazel.sh test --test_arg=--test.run='^TestLiveStreamDelete*' //video/internal/services/assetindex/...`
+
+## Build 
 
 - Build, but exclude a path
 
-`TODO:`
+`./bazel.sh build -- //video/... -//video/internal/servers/node-repoman/...`
+
+- Regenerate BUILD files - useful after changing dependencies
+
+`./bazel.sh run //:gazelle`
