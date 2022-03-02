@@ -9,7 +9,6 @@
 - Add or update dependency "github.com/spf13/cobra" to the WORKSPACE (default: latest or specify version with "@v1.2.1"): 
 
 `./bazel.sh run //:gazelle update-repos {{dependency}}`       
-`./bazel.sh run //:gazelle update-repos {{dependency}}@v{{version}}`   
 
 - Update WORKSPACE with the contents of the go.mod file : Note it has to be named go.mod
 
