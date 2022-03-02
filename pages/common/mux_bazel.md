@@ -9,7 +9,7 @@
 - Add or update dependency "github.com/spf13/cobra" to the WORKSPACE (default: latest or specify version with "@v1.2.1"): 
 
 `./bazel.sh run //:gazelle update-repos {{dependency}}`       
-`./bazel.sh run //:gazelle update-repos {{dependencya@v#}}`   
+`./bazel.sh run //:gazelle update-repos {{dependency}}@v{{version}}`   
 
 - Update WORKSPACE with the contents of the go.mod file : Note it has to be named go.mod
 
@@ -21,11 +21,11 @@
 
 - Copy generated protos to your source tree so they appear for your IDE / go tools:
 
-`run/dev/scripts/copy-generated-protos.sh`
+`./run/dev/scripts/copy-generated-protos.sh`
 
 - Clean for the above copied files (if they are interfering with Gazelle):
 
-`run/dev/scripts/copy-generated-protos.sh clean`
+`./run/dev/scripts/copy-generated-protos.sh clean`
 
 - Get a sorted list of all the dependencies used by "path" : path is expanded to "//path/..." : (video, data, run)
 
@@ -33,8 +33,8 @@
 
 - Run a single test
 
-TODO: 
+`TODO`
 
 - Build, but exclude a path
 
-TODO:
+`TODO:`
