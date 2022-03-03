@@ -1,6 +1,6 @@
 # bazel
 
-> More information: <https://bazel.build/>
+> More information: TODO: Change this to a bookstack page
 
 - See what uses a dependency in the repo path (dependency format is "org_golang_x_crypto", use path '//...' to scan the full repo). Example: `bazel.sh`
 
@@ -14,31 +14,9 @@
 
 `./bazel.sh run //:gazelle -- update-repos -from_file=go.mod`
   
-- Full Clean
-
-`./bazel.sh clean --expunge`
-
-- Copy generated protos to your source tree so they appear for your IDE / go tools:
-
-`./run/dev/scripts/copy-generated-protos.sh`
-
-- Clean for the above copied files (if they are interfering with Gazelle):
-
-`./run/dev/scripts/copy-generated-protos.sh clean`
-
 - Get a sorted list of all the dependencies used by "path" : path is expanded to "//path/..." : (video, data, run)
 
 `./run/dev/scripts/query_dependencies.sh {{path}}` 
-
-- Run a single test - use `--test-args=run=<regex>`
-
-`./bazel.sh test --test_arg=--test.run='^TestLiveStreamDelete*' //video/internal/services/assetindex/...`
-
-## Build 
-
-- Build, but exclude a path
-
-`./bazel.sh build -- //video/... -//video/internal/servers/node-repoman/...`
 
 - Regenerate BUILD files - useful after changing dependencies
 
