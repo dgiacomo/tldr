@@ -2,9 +2,9 @@
 
 > More information: <https://bazel.build/>
 
-- See what uses the dependency "org_golang_x_crypto" across entire repo: 
+- See what uses a dependency in the repo path (dependency format is "org_golang_x_crypto", use path '//...' to scan the full repo). Example: `bazel.sh`
 
-`./bazel.sh query "deps({{//path...}})" --output graph | grep {{dependency}}`   # Note: dependency is of form as represented by Bazel "org_golang_x_crypto"
+`./bazel.sh query "deps({{path}})" --output graph | grep {{dependency}}`   
 
 - Add or update dependency "github.com/spf13/cobra" to the WORKSPACE (default: latest or specify version with "@v1.2.1"): 
 
