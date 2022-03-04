@@ -1,6 +1,6 @@
 # bazel build and test
 
-> More information: TODO: Change this to a bookstack page
+> https://bookstack.mux.io/books/developer-environment/page/bazel-cheatsheet
 
 - Copy generated protos to your source tree so they appear for your IDE / go tools:
 
@@ -10,15 +10,7 @@
 
 `./run/dev/scripts/copy-generated-protos.sh clean`
 
-- Run a single test use `--test-filter` with a regex to the test you want. : Example: `^MyTest*` or `MyTest` 
-
-`./bazel.sh test --test_filter='{{regex}}' {{path}}`
-
-- Get verbose test output, like all tests run and how long they took
-
-`./bazel.sh test --test_arg="-test.v" --test_output=all {{path}}`
-
-- Build, but exclude a path
+- Exclude a path in a build
 
 `./bazel.sh build -- //video/... -//video/internal/servers/node-repoman/...`
 
@@ -30,6 +22,3 @@
 
 `./bazel.sh clean --expunge`
 
-- Investigate a failed build / test TODO: use sandbox debug and describe how to use it 
-
-`./bazel.sh {{build|test}} `
