@@ -2,7 +2,7 @@
 
 > https://bookstack.mux.io/books/developer-environment/page/bazel-cheatsheet
 
-- See what uses a dependency in the repo path (dependency format is "org_golang_x_crypto", use path '//...' to scan the full repo)
+- What uses a dependency in the path (dependency format is "org_golang_x_crypto", use path '//...' to scan the full repo)
 
 `./bazel.sh query "deps({{path}})" --output graph | grep {{dependency}}`   
 
@@ -10,7 +10,7 @@
 
 `./bazel.sh run //:gazelle update-repos {{dependency}}`       
 
-- Update WORKSPACE with the contents of the go.mod file. Only adds to or updates entries that leverage sum+version in WORKSPACE : Note: file has to be named go.mod
+- Use a go.mod file to update contents of WORKSPACE. Adds to or updates entries that leverage sum + version : Note: file has to be named go.mod
 
 `./bazel.sh run //:gazelle -- update-repos -from_file=go.mod`
   
@@ -18,7 +18,7 @@
 
 `./run/dev/scripts/query_dependencies.sh {{path}}` 
 
-- Regenerate BUILD files - useful after changing dependencies : path is optional - limit to the area you were working in
+- Regenerate BUILD files after changing dependencies : path is optional but can be used to limit to the area you were working in
 
 `./bazel.sh run //:gazelle {{path}}`
 
