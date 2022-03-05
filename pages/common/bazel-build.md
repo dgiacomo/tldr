@@ -22,3 +22,6 @@
 
 `./bazel.sh clean --expunge`
 
+- Troubleshooting : Bazel shows command it was running when it failed and can be rerun to access the sandbox for debugging 
+
+`./bazel.sh build --sandbox_debug --verbose_failures`
