@@ -14,7 +14,7 @@
 
 `./bazel.sh run //:gazelle -- update-repos -from_file=go.mod`
   
-- Get a sorted list of all the dependencies used by "path" : path is expanded to "//path/..." : (video, data, run or all if no arg is provided)
+- Get a sorted list of all the dependencies used by "path" : video, run, data, etc. - all if left blank
 
 `./run/dev/scripts/query_dependencies.sh {{path}}` 
 
