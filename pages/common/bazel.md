@@ -6,7 +6,7 @@
 
 `./bazel.sh query "deps({{path}})" --output graph | grep {{dependency}}`   
 
-- Add or update dependency in WORKSPACE. Doesn't handle transitives. Pulls latest if version not specified : {{dependency}}@v{{version}} example: github.com/spf13/cobra@v1.2.1
+- Add or update dependency in WORKSPACE. Doesn't handle transitives. Pulls latest if version not specified : {{dependency}}@v{{version}} example: github.com/spf13/cobra\@v1\.2\.1
 
 `./bazel.sh run //:gazelle update-repos {{dependency}}`       
 
