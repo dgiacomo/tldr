@@ -29,3 +29,11 @@
 - Clean up protos copied to your source tree (used when they are interfering with Gazelle):
 
 `./run/dev/scripts/copy-generated-protos.sh clean`
+
+- Get information on bazel's output dir, workspace, repo cache, and server logs / info
+
+`bazel info`
+
+- Jump to output directory from last Bazel build : has to be run from a workspace
+
+`$(bazel info output_base)`
