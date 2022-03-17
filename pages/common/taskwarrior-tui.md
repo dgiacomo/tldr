@@ -26,6 +26,6 @@
 
 `/project project:<project-name>`
 
-- get a list of tasks completed today
+- get a list of tasks completed today - note, default / filter has pending that needs to be removed
 
-`task completed end:today`
+`/task status:completed end:today`
