@@ -22,3 +22,7 @@
 - Delete task:
 
 `task {{task_id}} delete`
+
+- Get list of tasks completed today
+
+`task completed end:today`
