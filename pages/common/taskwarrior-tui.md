@@ -30,10 +30,14 @@
 
 `/status:completed end:today`
 
-- get a list of tasks completed since the start of the week:
+- get a list of tasks completed since the start of week (sow) or start of month (som):
 
 `/status:completed end.after:sow`
 
 - Get list of tasks due at end of day, week or quarter (+TODAY, +WEEK, +QUARTER):
 
 `/+TODAY`
+
+- Get list of tasks completed between two dates: 
+
+`/status:completed end.after:2022-03-04 and end.before:2022-03-15`
