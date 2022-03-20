@@ -27,7 +27,7 @@
 
 `task completed end:today`
 
-- Get list of tasks completed since start of the week (sow): 
+- Get list of tasks completed since start of the week (sow) or start of the month (som): 
 
 `task completed end.after:sow`
 
