@@ -38,3 +38,8 @@
 - Get a list of tasks completed between a range of date:
 
 `task end.after:2022-03-01 and end.before:2022-03-31 completed`
+
+- timesheet: all contexts, useful report : accepts filters (end:today,  end.after:sow, project)
+
+`task timesheet end:today project:{{project}}`
+
